@@ -97,11 +97,8 @@
 		6A2FCB202B0CB986005F77E1 /* PixabayApp */ = {
 			isa = PBXGroup;
 			children = (
-				6A2FCB212B0CB986005F77E1 /* AppDelegate.swift */,
-				6A2FCB232B0CB986005F77E1 /* SceneDelegate.swift */,
-				6A2FCB2A2B0CB987005F77E1 /* Assets.xcassets */,
-				6A2FCB2C2B0CB987005F77E1 /* LaunchScreen.storyboard */,
-				6A2FCB2F2B0CB987005F77E1 /* Info.plist */,
+				6A2FCB522B0CBAA6005F77E1 /* AppDelegate */,
+				6A2FCB532B0CBAC3005F77E1 /* Resources */,
 			);
 			path = PixabayApp;
 			sourceTree = "<group>";
@@ -121,6 +118,25 @@
 				6A2FCB442B0CB988005F77E1 /* PixabayAppUITestsLaunchTests.swift */,
 			);
 			path = PixabayAppUITests;
+			sourceTree = "<group>";
+		};
+		6A2FCB522B0CBAA6005F77E1 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				6A2FCB212B0CB986005F77E1 /* AppDelegate.swift */,
+				6A2FCB232B0CB986005F77E1 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		6A2FCB532B0CBAC3005F77E1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6A2FCB2A2B0CB987005F77E1 /* Assets.xcassets */,
+				6A2FCB2C2B0CB987005F77E1 /* LaunchScreen.storyboard */,
+				6A2FCB2F2B0CB987005F77E1 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,7 +446,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CB6VC9Q2Z4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PixabayApp/Info.plist;
+				INFOPLIST_FILE = PixabayApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -457,7 +473,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CB6VC9Q2Z4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PixabayApp/Info.plist;
+				INFOPLIST_FILE = PixabayApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
