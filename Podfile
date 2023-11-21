@@ -1,10 +1,10 @@
 platform :ios, '14.0'
+use_frameworks!
 
 target 'PixabayApp' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
-
-  # Pods for PixabayApp
+  
+  pod 'RxSwift'
+  pod 'RxCocoa'
 
   target 'PixabayAppTests' do
     inherit! :search_paths
