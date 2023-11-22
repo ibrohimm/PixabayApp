@@ -9,6 +9,11 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    // MARK: Properties
+    
+    @IBOutlet var emailLabel: UITextField!
+    @IBOutlet var passwordLabel: UITextField!
+    
     // MARK: Life cycle
     
     override func viewDidLoad() {
@@ -16,4 +21,13 @@ class LoginViewController: UIViewController {
         
     }
     
+    // MARK: Actions
+    
+    @IBAction func loginAction(_ sender: Any) {
+        
+    }
+    
+    @IBAction func createAccountAction(_ sender: Any) {
+        
+    }
 }
