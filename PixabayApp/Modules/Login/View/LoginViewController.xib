@@ -16,8 +16,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="PixabayApp" customModuleProvider="target">
             <connections>
-                <outlet property="emailLabel" destination="MgZ-H4-cz3" id="tWL-zM-pNE"/>
-                <outlet property="passwordLabel" destination="6rG-4P-8ff" id="aVd-Mc-Rcr"/>
+                <outlet property="emailTextField" destination="MgZ-H4-cz3" id="tWL-zM-pNE"/>
+                <outlet property="loginButton" destination="GQu-f0-EVU" id="gdn-FI-SLc"/>
+                <outlet property="passwordTextField" destination="6rG-4P-8ff" id="aVd-Mc-Rcr"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -45,7 +46,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" secureTextEntry="YES"/>
                         </textField>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQu-f0-EVU">
+                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQu-f0-EVU">
                             <rect key="frame" x="0.0" y="140" width="353" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="Rmk-9o-jXa"/>
