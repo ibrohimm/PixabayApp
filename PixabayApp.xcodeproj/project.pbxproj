@@ -120,10 +120,18 @@
 		6A0375432B0DD443004C57F5 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				6A03754A2B0DF03E004C57F5 /* View */,
 				6A0375442B0DD4F8004C57F5 /* LoginViewController.swift */,
-				6A0375452B0DD4F8004C57F5 /* LoginViewController.xib */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		6A03754A2B0DF03E004C57F5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6A0375452B0DD4F8004C57F5 /* LoginViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		6A2FCB152B0CB986005F77E1 = {
