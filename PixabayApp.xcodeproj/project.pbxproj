@@ -46,6 +46,10 @@
 		6A2FCB432B0CB988005F77E1 /* PixabayAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2FCB422B0CB988005F77E1 /* PixabayAppUITests.swift */; };
 		6A2FCB452B0CB988005F77E1 /* PixabayAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2FCB442B0CB988005F77E1 /* PixabayAppUITestsLaunchTests.swift */; };
 		6A2FCB582B0CBBC0005F77E1 /* LocalizationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2FCB572B0CBBC0005F77E1 /* LocalizationHelper.swift */; };
+		6A65264F2B0FB02400EB3B51 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A65264D2B0FB02400EB3B51 /* DetailViewController.swift */; };
+		6A6526502B0FB02400EB3B51 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A65264E2B0FB02400EB3B51 /* DetailViewController.xib */; };
+		6A6526552B0FB09F00EB3B51 /* DetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6526542B0FB09F00EB3B51 /* DetailCoordinator.swift */; };
+		6A6526572B0FB0F000EB3B51 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6526562B0FB0F000EB3B51 /* DetailViewModel.swift */; };
 		6C9AE3EDDE62E9B65B17F5BB /* Pods_PixabayAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B3354F9669C23B859013B1 /* Pods_PixabayAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +118,10 @@
 		6A2FCB442B0CB988005F77E1 /* PixabayAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixabayAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		6A2FCB512B0CB9DD005F77E1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6A2FCB572B0CBBC0005F77E1 /* LocalizationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationHelper.swift; sourceTree = "<group>"; };
+		6A65264D2B0FB02400EB3B51 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		6A65264E2B0FB02400EB3B51 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		6A6526542B0FB09F00EB3B51 /* DetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinator.swift; sourceTree = "<group>"; };
+		6A6526562B0FB0F000EB3B51 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		6C042A87A21870E720C1798E /* Pods_PixabayApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PixabayApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D2DA5291B7C9756A0F8244B /* Pods-PixabayApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PixabayApp.debug.xcconfig"; path = "Target Support Files/Pods-PixabayApp/Pods-PixabayApp.debug.xcconfig"; sourceTree = "<group>"; };
 		9E919580DE8511224FCEAA5D /* Pods-PixabayApp-PixabayAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PixabayApp-PixabayAppUITests.release.xcconfig"; path = "Target Support Files/Pods-PixabayApp-PixabayAppUITests/Pods-PixabayApp-PixabayAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -162,6 +170,7 @@
 		6A0375422B0DD43A004C57F5 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				6A65264C2B0FAFF400EB3B51 /* Detail */,
 				6A0375722B0F4E3D004C57F5 /* Home */,
 				6A0375432B0DD443004C57F5 /* Login */,
 			);
@@ -422,6 +431,41 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
+		6A65264C2B0FAFF400EB3B51 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				6A6526532B0FB08F00EB3B51 /* Coordinator */,
+				6A6526522B0FB08600EB3B51 /* View */,
+				6A6526512B0FB07E00EB3B51 /* ViewModel */,
+				6A65264D2B0FB02400EB3B51 /* DetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		6A6526512B0FB07E00EB3B51 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6A6526562B0FB0F000EB3B51 /* DetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6A6526522B0FB08600EB3B51 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6A65264E2B0FB02400EB3B51 /* DetailViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6A6526532B0FB08F00EB3B51 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				6A6526542B0FB09F00EB3B51 /* DetailCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		8759F4E393E56452E5DFA964 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -556,6 +600,7 @@
 			files = (
 				6A0375872B0F5E75004C57F5 /* ImageTableViewCell.xib in Resources */,
 				6A0375472B0DD4F8004C57F5 /* LoginViewController.xib in Resources */,
+				6A6526502B0FB02400EB3B51 /* DetailViewController.xib in Resources */,
 				6A2FCB2E2B0CB987005F77E1 /* LaunchScreen.storyboard in Resources */,
 				6A0375762B0F4E4C004C57F5 /* HomeViewController.xib in Resources */,
 				6A03756F2B0F3A05004C57F5 /* Localizable.strings in Resources */,
@@ -690,14 +735,17 @@
 				6A03757C2B0F4EF7004C57F5 /* HomeViewModel.swift in Sources */,
 				6A0375522B0DF464004C57F5 /* Coordinator.swift in Sources */,
 				6A0375A52B0FA9A9004C57F5 /* UIImageView+Extension.swift in Sources */,
+				6A6526552B0FB09F00EB3B51 /* DetailCoordinator.swift in Sources */,
 				6A03756B2B0F2EA4004C57F5 /* Alert+Extension.swift in Sources */,
 				6A0375A22B0F7707004C57F5 /* RemoteImageItem.swift in Sources */,
 				6A0375462B0DD4F8004C57F5 /* LoginViewController.swift in Sources */,
 				6A2FCB222B0CB986005F77E1 /* AppDelegate.swift in Sources */,
 				6A0375412B0DCDCB004C57F5 /* HTTPClient.swift in Sources */,
 				6A03757F2B0F4F1F004C57F5 /* HomeRepository.swift in Sources */,
+				6A65264F2B0FB02400EB3B51 /* DetailViewController.swift in Sources */,
 				6A03759C2B0F74B5004C57F5 /* ImageModel.swift in Sources */,
 				6A0375752B0F4E4C004C57F5 /* HomeViewController.swift in Sources */,
+				6A6526572B0FB0F000EB3B51 /* DetailViewModel.swift in Sources */,
 				6A0375682B0F2BB5004C57F5 /* Validator.swift in Sources */,
 				6A2FCB242B0CB986005F77E1 /* SceneDelegate.swift in Sources */,
 				6A2FCB582B0CBBC0005F77E1 /* LocalizationHelper.swift in Sources */,
