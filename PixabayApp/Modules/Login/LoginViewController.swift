@@ -18,37 +18,31 @@ class LoginViewController: UIViewController {
     @IBOutlet private var loginButton: UIButton!
     
     private let disposeBag = DisposeBag()
-    var viewModel: LoginViewModel?
+    var viewModel: LoginViewModel!
     
     // MARK: Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let emailValid = emailTextField.rx.text.orEmpty.map { $0.isValidEmail() }
-        let passwordValid = passwordTextField.rx.text.orEmpty.map { $0.isValidPassword() }
-        
-        Observable.combineLatest(emailValid, passwordValid) { $0 && $1 }
-            .bind(to: loginButton.rx.isEnabled)
-            .disposed(by: disposeBag)
-        
-        loginButton.rx.tap
-            .subscribe(onNext: { [weak self] in
-                self?.login()
-            })
-            .disposed(by: disposeBag)
-    }
-    
-    // MARK: Actions
-    
-    @IBAction func createAccountAction(_ sender: Any) {
-        
+        bindViewModel()
     }
     
     // MARK: - Helper
     
-    private func login() {
-        guard let email = emailTextField.text, let password = passwordTextField.text else { return }
+    private func bindViewModel() {
+        emailTextField.rx.text.orEmpty.bind(to: viewModel.emailText).disposed(by: disposeBag)
+        passwordTextField.rx.text.orEmpty.bind(to: viewModel.passwordText).disposed(by: disposeBag)
         
+        viewModel.errorMessage.subscribe(onNext: { [weak self] message in
+            self?.displayErrorAlert(message: message)
+        }).disposed(by: disposeBag)
+        
+        loginButton.rx.tap.bind(to: viewModel.loginTapped).disposed(by: disposeBag)
+    }
+    
+    private func displayErrorAlert(message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 }

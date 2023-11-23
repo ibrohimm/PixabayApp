@@ -46,7 +46,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" secureTextEntry="YES"/>
                         </textField>
-                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQu-f0-EVU">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQu-f0-EVU">
                             <rect key="frame" x="0.0" y="140" width="353" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="Rmk-9o-jXa"/>
@@ -59,9 +59,6 @@
                                 <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
                                 <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </buttonConfiguration>
-                            <connections>
-                                <action selector="loginAction:" destination="-1" eventType="touchUpInside" id="k2c-ym-PiY"/>
-                            </connections>
                         </button>
                     </subviews>
                 </stackView>
@@ -71,23 +68,6 @@
                     <color key="textColor" red="0.0" green="0.45882352939999999" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFZ-wh-Kck">
-                    <rect key="frame" x="20" y="768" width="353" height="50"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="wnY-AU-lGZ"/>
-                    </constraints>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Create account">
-                        <backgroundConfiguration key="background" cornerRadius="25">
-                            <color key="backgroundColor" systemColor="systemCyanColor"/>
-                        </backgroundConfiguration>
-                        <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
-                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </buttonConfiguration>
-                    <connections>
-                        <action selector="createAccountAction:" destination="-1" eventType="touchUpInside" id="blC-Ly-Nb7"/>
-                    </connections>
-                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -95,12 +75,9 @@
                 <constraint firstItem="PMo-l9-wcj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="7qC-DH-Rs3"/>
                 <constraint firstItem="PMo-l9-wcj" firstAttribute="top" secondItem="44Q-kq-azu" secondAttribute="bottom" constant="60" id="Afb-C8-xdf"/>
                 <constraint firstItem="44Q-kq-azu" firstAttribute="centerX" secondItem="PMo-l9-wcj" secondAttribute="centerX" id="Am0-VN-wbS"/>
-                <constraint firstItem="OFZ-wh-Kck" firstAttribute="leading" secondItem="PMo-l9-wcj" secondAttribute="leading" id="GOX-iu-BBE"/>
                 <constraint firstItem="PMo-l9-wcj" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="QqJ-zv-eDx"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="OFZ-wh-Kck" secondAttribute="bottom" id="m3a-3L-nhA"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PMo-l9-wcj" secondAttribute="trailing" constant="20" id="p8l-rL-KdO"/>
                 <constraint firstItem="PMo-l9-wcj" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="xJp-64-qzq"/>
-                <constraint firstItem="OFZ-wh-Kck" firstAttribute="trailing" secondItem="PMo-l9-wcj" secondAttribute="trailing" id="y04-I6-feS"/>
             </constraints>
             <point key="canvasLocation" x="65" y="21"/>
         </view>
@@ -108,9 +85,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemCyanColor">
-            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
