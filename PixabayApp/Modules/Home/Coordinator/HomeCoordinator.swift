@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeCoordinator: Coordinator {
+final class HomeCoordinator: Coordinator {
     private let navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
@@ -15,8 +15,9 @@ class HomeCoordinator: Coordinator {
     }
     
     func start() {
-        let service = HomeServiceImpl()
-        let viewModel = HomeViewModel(service: service, coordinator: self)
+        let client = URLSessionHTTPClient()
+        let homeRepository = RemoteHomeRepository(client: client)
+        let viewModel = HomeViewModel(homeRepository: homeRepository, coordinator: self)
         let viewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
         viewController.viewModel = viewModel
         navigationController.viewControllers = [viewController]
