@@ -25,6 +25,7 @@ class LoginCoordinator: Coordinator {
     // MARK: -
     
     func openHomePage() {
-        print("Open Home Page")
+        let homeCoordinator = HomeCoordinator(navigationController: navigationController)
+        homeCoordinator.start()
     }
 }
