@@ -33,11 +33,11 @@ final class DetailViewController: UIViewController {
                 let indexPath = IndexPath(row: 0, section: index)
                 switch element {
                 case .section1(let data):
-                    let cell = tableView.dequeueReusableCell(withIdentifier: "ImageDetailFirstSectionCell", for: indexPath) as! ImageDetailFirstSectionCell
+                    let cell = tableView.dequeueCell(ImageDetailFirstSectionCell.self, for: indexPath)
                     cell.configure(with: data)
                     return cell
                 case .section2(let data):
-                    let cell = tableView.dequeueReusableCell(withIdentifier: "ImageDetailSecondSectionCell", for: indexPath) as! ImageDetailSecondSectionCell
+                    let cell = tableView.dequeueCell(ImageDetailSecondSectionCell.self, for: indexPath)
                     cell.configure(with: data)
                     return cell
                 }
@@ -46,7 +46,7 @@ final class DetailViewController: UIViewController {
     }
     
     private func setupTableView() {
-        tableView.register(UINib(nibName: "ImageDetailFirstSectionCell", bundle: nil), forCellReuseIdentifier: "ImageDetailFirstSectionCell")
-        tableView.register(UINib(nibName: "ImageDetailSecondSectionCell", bundle: nil), forCellReuseIdentifier: "ImageDetailSecondSectionCell")
+        tableView.register(ImageDetailFirstSectionCell.self)
+        tableView.register(ImageDetailSecondSectionCell.self)
     }
 }

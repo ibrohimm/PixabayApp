@@ -34,7 +34,7 @@ final class HomeViewController: UIViewController {
             .disposed(by: disposeBag)
         
         viewModel.images
-            .drive(tableView.rx.items(cellIdentifier: "ImageTableViewCell", cellType: ImageTableViewCell.self)) { _, model, cell in
+            .drive(tableView.rx.items(cellIdentifier: ImageTableViewCell.cellIdentifier, cellType: ImageTableViewCell.self)) { _, model, cell in
                 cell.configure(with: model)
             }
             .disposed(by: disposeBag)
@@ -55,6 +55,6 @@ final class HomeViewController: UIViewController {
     }
     
     private func setupTableView() {
-        tableView.register(UINib(nibName: "ImageTableViewCell", bundle: nil), forCellReuseIdentifier: "ImageTableViewCell")
+        tableView.register(ImageTableViewCell.self)
     }
 }

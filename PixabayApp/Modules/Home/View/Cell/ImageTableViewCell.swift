@@ -8,7 +8,11 @@
 import UIKit
 
 final class ImageTableViewCell: UITableViewCell {
-
+    
+    static var cellIdentifier: String {
+        return String(describing: self)
+    }
+    
     @IBOutlet private var thumbnailImageView: UIImageView!
     @IBOutlet private var userNameLabel: UILabel!
     
