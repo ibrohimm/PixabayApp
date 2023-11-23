@@ -13,6 +13,9 @@ protocol LoginService {
 
 class LoginServiceImpl: LoginService {
     func login(email: String, password: String) -> Single<User> {
+        
+        KeychainManager.standard.saveAPIKey(apiKey: "YOUR_API_KEY")
+        
         let user = User()
         return Single.just(user)
     }
