@@ -1,5 +1,5 @@
 //
-//  HomeService.swift
+//  Endpoint.swift
 //  PixabayApp
 //
 //  Created by Ibrokhim Movlonov on 23/11/23.
@@ -7,10 +7,9 @@
 
 import Foundation
 
-protocol HomeService {
+enum Endpoint {
+    static let baseURL = "https://pixabay.com/api/"
     
-}
-
-class HomeServiceImpl: HomeService {
+    // MARK: -
     
 }

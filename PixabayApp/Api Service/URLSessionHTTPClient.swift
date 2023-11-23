@@ -15,11 +15,6 @@ public final class URLSessionHTTPClient: HTTPClient {
         self.session = session
     }
     
-    private enum APIError: Error {
-        case dataError
-        case httpError
-    }
-    
     public func get(with request: URLRequest) -> Handler {
         return Handler.create { [weak self] single in
             let task = self?.session.dataTask(with: request) { data, response, error in
