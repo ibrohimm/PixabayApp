@@ -25,7 +25,8 @@ final class HomeCoordinator: Coordinator {
 
     // MARK: -
     
-    func openDetailPage() {
-        print("Open Detail Page")
+    func navigateToDetailPage(model: ImageModel) {
+        let detailCoordinator = DetailCoordinator(navigationController: navigationController, model: model)
+        detailCoordinator.start()
     }
 }

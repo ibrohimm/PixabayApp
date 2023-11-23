@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = navigation
         window?.makeKeyAndVisible()
         
-        let coordinator = LoginCoordinator(navigationController: navigation)
+        let coordinator = HomeCoordinator(navigationController: navigation)
         coordinator.start()
     }
 

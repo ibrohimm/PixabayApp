@@ -28,7 +28,11 @@ final class HomeViewController: UIViewController {
     
     // MARK: -
     
-    private func setupBindings() {        
+    private func setupBindings() {
+        viewModel.title
+            .drive(rx.title)
+            .disposed(by: disposeBag)
+        
         viewModel.images
             .drive(tableView.rx.items(cellIdentifier: "ImageTableViewCell", cellType: ImageTableViewCell.self)) { _, model, cell in
                 cell.configure(with: model)
@@ -46,10 +50,7 @@ final class HomeViewController: UIViewController {
             .disposed(by: disposeBag)
         
         tableView.rx.modelSelected(ImageModel.self)
-            .subscribe(onNext: { selectedImage in
-                // Navigate to image details
-                print(selectedImage)
-            })
+            .bind(to: viewModel.didSelectItem)
             .disposed(by: disposeBag)
     }
     

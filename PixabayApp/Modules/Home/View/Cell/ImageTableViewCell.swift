@@ -19,7 +19,7 @@ final class ImageTableViewCell: UITableViewCell {
     
     func configure(with image: ImageModel) {
         userNameLabel.text = image.user
-        thumbnailImageView.setImage(with: image.webformatURL, placeholder: UIImage(systemName: "photo"))
+        thumbnailImageView.setImage(with: image.webformatURL)
     }
     
 }
