@@ -34,15 +34,9 @@ class LoginViewController: UIViewController {
         passwordTextField.rx.text.orEmpty.bind(to: viewModel.passwordText).disposed(by: disposeBag)
         
         viewModel.errorMessage.subscribe(onNext: { [weak self] message in
-            self?.displayErrorAlert(message: message)
+            self?.showErrorAlert(with: message)
         }).disposed(by: disposeBag)
         
         loginButton.rx.tap.bind(to: viewModel.loginTapped).disposed(by: disposeBag)
-    }
-    
-    private func displayErrorAlert(message: String) {
-        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
     }
 }
