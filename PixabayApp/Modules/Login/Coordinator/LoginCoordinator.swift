@@ -22,5 +22,9 @@ class LoginCoordinator: Coordinator {
         navigationController.pushViewController(viewController, animated: true)
     }
 
-    // Additional methods for coordinating other view controllers
+    // MARK: -
+    
+    func openHomePage() {
+        print("Open Home Page")
+    }
 }

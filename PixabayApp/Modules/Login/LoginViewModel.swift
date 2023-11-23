@@ -13,7 +13,7 @@ class LoginViewModel {
     
     // MARK: - Properties
     
-    private let coordinator: Coordinator
+    private let coordinator: LoginCoordinator
     private let service: LoginService
     private let disposeBag = DisposeBag()
     
@@ -24,7 +24,7 @@ class LoginViewModel {
     
     // MARK: - Init
     
-    init(service: LoginService, coordinator: Coordinator) {
+    init(service: LoginService, coordinator: LoginCoordinator) {
         self.coordinator = coordinator
         self.service = service
         
@@ -51,7 +51,16 @@ class LoginViewModel {
             return
         }
         
-        // Mock login service - Replace this with your actual login logic
-        print("Success")
+        login(email: emailText.value, password: passwordText.value)
+    }
+    
+    private func login(email: String, password: String) {
+        service.login(email: email, password: password)
+            .subscribe(onSuccess: { user in
+                self.coordinator.openHomePage()
+            }, onFailure: { error in
+                self.errorMessage.onNext(error.localizedDescription)
+            })
+            .disposed(by: disposeBag)
     }
 }
