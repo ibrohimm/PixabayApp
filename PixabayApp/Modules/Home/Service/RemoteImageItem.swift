@@ -9,6 +9,7 @@ import Foundation
 
 struct RemoteImageItem: Decodable {
     let id: Int
+    let imageURL: String?
     let webformatURL: String?
     let largeImageURL: String?
     let user: String?
@@ -17,4 +18,8 @@ struct RemoteImageItem: Decodable {
     let likes: Int
     let tags: String?
     let views: Int
+    let type: String?
+    let imageSize: Int
+    let imageWidth: Int
+    let imageHeight: Int
 }

@@ -19,6 +19,12 @@ final class HomeViewModel {
     let images: Driver<[ImageModel]>
     let isLoading: Driver<Bool>
     let errorDriver: Driver<String>
+    let didSelectItem = PublishSubject<ImageModel>()
+    
+    var title: Driver<String> {
+        Observable.just("PIXABAY".localized())
+            .asDriver(onErrorJustReturn: "")
+    }
     
     // MARK: - Init
     
@@ -50,6 +56,12 @@ final class HomeViewModel {
         
         errorDriver = errorSubject
             .asDriver(onErrorJustReturn: "")
+        
+        didSelectItem
+            .subscribe(onNext: { [weak coordinator] selectedImage in
+                coordinator?.navigateToDetailPage(model: selectedImage)
+            })
+            .disposed(by: disposeBag)
     }
     
     // MARK: - Helper

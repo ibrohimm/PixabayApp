@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="N2k-DU-zGN">
-                        <rect key="frame" x="16" y="0.0" width="288" height="146"/>
+                        <rect key="frame" x="16" y="0.0" width="288" height="142"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tlJ-gw-fAW">
                                 <rect key="frame" x="0.0" y="0.0" width="288" height="120"/>
@@ -27,8 +27,8 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4DR-69-vn1">
-                                <rect key="frame" x="54.666666666666671" y="130" width="178.66666666666663" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="68" y="130" width="152" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -40,8 +40,8 @@
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="N2k-DU-zGN" secondAttribute="bottom" constant="8" id="7kS-rO-NER"/>
                     <constraint firstItem="N2k-DU-zGN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="IC7-kr-X5f"/>
+                    <constraint firstAttribute="bottom" secondItem="N2k-DU-zGN" secondAttribute="bottom" constant="12" id="fGd-Sy-h7M"/>
                     <constraint firstItem="N2k-DU-zGN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="jPK-VE-mdf"/>
                     <constraint firstAttribute="trailing" secondItem="N2k-DU-zGN" secondAttribute="trailing" constant="16" id="nX3-Ya-Ulq"/>
                 </constraints>

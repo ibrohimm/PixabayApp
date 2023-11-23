@@ -9,6 +9,5 @@ import Foundation
 
 enum APIError: Error {
     case dataError
-    case httpError
-    case parseError
+    case serverError
 }

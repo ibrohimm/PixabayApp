@@ -11,7 +11,7 @@ protocol LoginService {
     func login(email: String, password: String) -> Single<User>
 }
 
-class LoginServiceImpl: LoginService {
+final class LoginServiceImpl: LoginService {
     func login(email: String, password: String) -> Single<User> {
         
         KeychainManager.standard.saveAPIKey(apiKey: "YOUR_API_KEY")
