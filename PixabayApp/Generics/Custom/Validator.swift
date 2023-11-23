@@ -12,7 +12,7 @@ enum ValidationResult: Equatable {
     case invalid(message: String)
 }
 
-class Validator {
+final class Validator {
     static func validateEmail(_ email: String) -> ValidationResult {
         guard !email.isEmpty else {
             return .invalid(message: "EMAIL_REQUIRED".localized())

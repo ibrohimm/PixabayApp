@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginCoordinator: Coordinator {
+final class LoginCoordinator: Coordinator {
     private let navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {

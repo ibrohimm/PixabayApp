@@ -33,7 +33,7 @@ public final class URLSessionHTTPClient: HTTPClient {
                 case 200..<300:
                     single(.success(data))
                 default:
-                    let error = APIError.httpError
+                    let error = APIError.serverError
                     single(.failure(error))
                 }
             }

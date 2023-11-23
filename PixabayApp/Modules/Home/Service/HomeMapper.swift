@@ -15,7 +15,7 @@ final class HomeMapper {
     
     static func map(_ data: Data) throws -> [ImageModel] {
         guard let root = try? JSONDecoder().decode(Root.self, from: data) else {
-            throw APIError.parseError
+            throw APIError.dataError
         }
         
         return root.hits.toModels()

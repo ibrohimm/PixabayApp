@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
     
     // MARK: Properties
     
