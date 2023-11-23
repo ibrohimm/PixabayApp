@@ -5,6 +5,7 @@ target 'PixabayApp' do
   
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'Kingfisher', '~> 7.0'
 
   target 'PixabayAppTests' do
     inherit! :search_paths
