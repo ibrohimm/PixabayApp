@@ -1,14 +1,15 @@
 # PixabayApp
  
-This is a simple application that allows the user to login or register a profile, and see a list of images and its details.
+This is a simple application that allows the user to login a profile, and see a list of images and its details. 
+To get started, you'll need to set up your API key for authentication in LoginService file.
 
-## Required technologies and architecture patterns
+## Used technologies and architecture patterns
 
-- MVVM
+- MVVM+C
 - Dependency Injection
 - Repository Pattern
-- RxSwift
-- UI created through XIB files (do not use Storyboards)
+- RxSwift, RxCocoa
+- UI created through XIB files
 
 ## Specifications
 
