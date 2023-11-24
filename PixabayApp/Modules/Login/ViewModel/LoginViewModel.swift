@@ -20,7 +20,19 @@ final class LoginViewModel {
     let emailText = BehaviorRelay<String>(value: "")
     let passwordText = BehaviorRelay<String>(value: "")
     let loginTapped = PublishSubject<Void>()
-    let errorMessage = PublishSubject<String>()
+    
+    // Use BehaviorRelay to hold error messages
+    private let emailError = BehaviorRelay<String?>(value: nil)
+    private let passwordError = BehaviorRelay<String?>(value: nil)
+    
+    // Expose Driver properties for UI binding
+    var emailErrorDriver: Driver<String?> {
+        return emailError.asDriver()
+    }
+    
+    var passwordErrorDriver: Driver<String?> {
+        return passwordError.asDriver()
+    }
     
     // MARK: - Init
     
@@ -39,15 +51,13 @@ final class LoginViewModel {
         let emailResult = Validator.validateEmail(emailText.value)
         let passwordResult = Validator.validatePassword(passwordText.value)
         
-        guard emailResult == .valid, passwordResult == .valid else {
-            var message = ""
-            if case .invalid(let emailMessage) = emailResult {
-                message = emailMessage
-            }
-            else if case .invalid(let passwordMessage) = passwordResult {
-                message = passwordMessage
-            }
-            errorMessage.onNext(message)
+        if case .invalid(let emailMessage) = emailResult {
+            emailError.accept(emailMessage)
+            return
+        }
+        
+        if case .invalid(let passwordMessage) = passwordResult {
+            passwordError.accept(passwordMessage)
             return
         }
         
@@ -59,7 +69,7 @@ final class LoginViewModel {
             .subscribe(onSuccess: { user in
                 self.coordinator.openHomePage()
             }, onFailure: { error in
-                self.errorMessage.onNext(error.localizedDescription)
+                print("Authentication failed: \(error.localizedDescription)")
             })
             .disposed(by: disposeBag)
     }
