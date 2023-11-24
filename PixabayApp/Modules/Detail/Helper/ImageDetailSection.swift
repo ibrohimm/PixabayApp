@@ -39,7 +39,7 @@ struct Section2Data {
         self.views = "\(imageModel.views)"
         self.likes = "\(imageModel.likes)"
         self.comments = "\(imageModel.comments)"
-        self.favorites = ""
+        self.favorites = "0"
         self.downloads = "\(imageModel.downloads)"
     }
     

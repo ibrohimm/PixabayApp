@@ -48,11 +48,11 @@ final class HomeViewModel {
                 })
         }
         .asDriver(onErrorJustReturn: [])
-        .startWith([]) // Provide an initial value
+        .startWith([])
         
         isLoading = loadingSubject
             .asDriver(onErrorJustReturn: false)
-            .skip(1) // Skip initial loading state
+            .skip(1)
         
         errorDriver = errorSubject
             .asDriver(onErrorJustReturn: "")
